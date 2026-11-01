@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Atom Publisher</title>
+  <entry>
+    <title>Atom headline</title>
+    <link rel="alternate" href="https://atom.example/story/1"/>
+    <updated>2026-10-19T00:00:00Z</updated>
+    <summary>Atom summary</summary>
+    <category term="technology"/>
+  </entry>
+</feed>

@@ -1,0 +1,15 @@
+{
+  "items": [
+    {
+      "title": "LIVE: Perkembangan terbaru situasi di Jakarta",
+      "snippet": "Laporan langsung mengenai perkembangan terbaru di Jakarta.",
+      "url": "https://www.youtube.com/watch?v=example123",
+      "source_name": "Kanal Berita Nusantara",
+      "source_verified": true,
+      "published_text": "2 jam lalu",
+      "views_text": "983",
+      "badges": ["LIVE", "BREAKING"],
+      "extras": {}
+    }
+  ]
+}

@@ -1,0 +1,594 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-31T12:42:50+07:00",
+  "branch": "fix",
+  "status_labels": [
+    "DONE",
+    "PARTIAL",
+    "NOT_STARTED",
+    "BROKEN"
+  ],
+  "worktree": {
+    "raw_git_status_before_progress_files": " M README.md\n D app/__halaman-gelap/page.tsx\n D app/__halaman-gelap/truth/page.tsx\n M app/api/news/route.ts\n M app/globals.css\n M app/layout.tsx\n M components/dashboard/DashboardView.tsx\n M components/features/article/ArtikelView.tsx\n M components/features/frontpage/BroadsheetItem.tsx\n M components/features/secret/AltZIPortal.tsx\n M components/features/secret/CRTOverlay.tsx\n M components/features/secret/GlitchText.tsx\n M components/features/secret/GrungeShell.tsx\n M components/features/secret/KonamiLayer.tsx\n M components/features/secret/SecretSafeView.tsx\n M components/features/secret/SecretTruthView.tsx\n M components/igs/EChartPanel.tsx\n M components/igs/GovAnalyticsView.tsx\n M components/igs/GovOverview.tsx\n M components/igs/MetricChart.tsx\n M components/layout/EasterEggProvider.tsx\n M components/layout/Footer.tsx\n M components/layout/MobileSidebar.tsx\n M components/layout/Navbar.tsx\n M components/layout/Sidebar.tsx\n M components/layout/SidebarItem.tsx\n M components/layout/TheThread.tsx\n M context/SESSION-STATE.md\n M docs/igs-qa.md\n M lib/api/server.ts\n M lib/data/index.json\n M tailwind.config.ts\n?? components/layout/ModeToggle.tsx\n?? components/layout/RootShell.tsx\n?? content/common.json\n?? content/irn/\n?? lib/mode.ts\n?? lib/site-config.ts\n?? public/",
+    "dirty_files": [
+      " M README.md",
+      " D app/__halaman-gelap/page.tsx",
+      " D app/__halaman-gelap/truth/page.tsx",
+      " M app/api/news/route.ts",
+      " M app/globals.css",
+      " M app/gov/analytics/page.tsx",
+      " M app/layout.tsx",
+      " M components/dashboard/DashboardView.tsx",
+      " M components/features/article/ArtikelView.tsx",
+      " M components/features/frontpage/BroadsheetItem.tsx",
+      " M components/features/secret/AltZIPortal.tsx",
+      " M components/features/secret/CRTOverlay.tsx",
+      " M components/features/secret/GlitchText.tsx",
+      " M components/features/secret/GrungeShell.tsx",
+      " M components/features/secret/KonamiLayer.tsx",
+      " M components/features/secret/SecretSafeView.tsx",
+      " M components/features/secret/SecretTruthView.tsx",
+      " M components/igs/EChartPanel.tsx",
+      " M components/igs/GeoMapBoot.tsx",
+      " M components/igs/GovAnalyticsView.tsx",
+      " M components/igs/GovOverview.tsx",
+      " M components/igs/GovTopicInventory.tsx",
+      " M components/igs/GovTopicPage.tsx",
+      " M components/igs/GovTopicView.tsx",
+      " M components/igs/MetricChart.tsx",
+      " M components/layout/EasterEggProvider.tsx",
+      " M components/layout/Footer.tsx",
+      " M components/layout/MobileSidebar.tsx",
+      " M components/layout/Navbar.tsx",
+      " M components/layout/Sidebar.tsx",
+      " M components/layout/SidebarItem.tsx",
+      " M components/layout/TheThread.tsx",
+      " M context/SESSION-STATE.md",
+      "?? docs/igs-progress.json",
+      "?? docs/igs-progress.md",
+      " M docs/igs-qa.md",
+      " M lib/api/server.ts",
+      " M lib/data/index.json",
+      " M tailwind.config.ts",
+      "?? components/igs/CrossDatasetViews.tsx",
+      "?? components/igs/FetchQualityGauges.tsx",
+      "?? components/igs/echarts-runtime.ts",
+      "?? components/layout/ModeToggle.tsx",
+      "?? components/layout/RootShell.tsx",
+      "?? content/common.json",
+      "?? content/irn/",
+      "?? lib/mode.ts",
+      "?? lib/site-config.ts",
+      "?? public/"
+    ],
+    "note": "raw_git_status_before_progress_files is the historical initial snapshot; dirty_files records the worktree at the end of Session #3. Existing IRN/other changes were preserved."
+  },
+  "recent_commits": [
+    "50ef42e feat(igs): three.js temporal scenes",
+    "fd62a0b feat(igs): maps + full chart inventory",
+    "e0a9a38 feat(config): add high-priority RSS sources",
+    "f37b63d fix(three): keep reduced-motion scene static",
+    "21b8dd0 fix(theme): define RGB tokens for opacity modifiers",
+    "5e5d4c6 fix(theme): preserve opacity utilities for palette colors",
+    "823e252 feat(landing): use full feed for latest and trending",
+    "d756e58 feat(landing): split latest and trending sections",
+    "c467c8f feat(three): add scroll and pointer reactivity",
+    "31d0594 feat(theme): prevent dark mode flash on load"
+  ],
+  "in_progress": [
+    "Session #2 added analytics cross-dataset views and four requested chart types; Session #3 reduced /gov/analytics First Load JS to 108 kB. Existing dirty IRN files and content extraction were not changed; no files were staged or committed."
+  ],
+  "foundation": [
+    {
+      "feature": "Path-based IRN-IGS mode switch",
+      "status": "DONE",
+      "evidence": [
+        "lib/mode.ts",
+        "components/layout/ModeToggle.tsx",
+        "components/layout/Sidebar.tsx",
+        "components/layout/MobileSidebar.tsx"
+      ],
+      "notes": "Source selects mode from pathname."
+    },
+    {
+      "feature": "Dynamic favicon and fallback",
+      "status": "PARTIAL",
+      "evidence": [
+        "components/layout/RootShell.tsx",
+        "public/favicon-irn.svg",
+        "public/favicon-igs.svg"
+      ],
+      "notes": "Source implements fallback to /favicon.ico; browser behavior not tested this session."
+    },
+    {
+      "feature": "Mode-aware shared sidebar",
+      "status": "DONE",
+      "evidence": [
+        "components/layout/Sidebar.tsx",
+        "lib/site-config.ts"
+      ],
+      "notes": "One sidebar component chooses sections by mode."
+    },
+    {
+      "feature": "RootShell with mode prop",
+      "status": "PARTIAL",
+      "evidence": [
+        "components/layout/RootShell.tsx"
+      ],
+      "notes": "RootShell derives mode from pathname and has no explicit mode prop."
+    },
+    {
+      "feature": "IRN copy extraction",
+      "status": "PARTIAL",
+      "evidence": [
+        "content/irn/site.json",
+        "content/irn/insight.json"
+      ],
+      "notes": "Files exist; completeness of extraction not audited."
+    },
+    {
+      "feature": "IGS copy extraction",
+      "status": "DONE",
+      "evidence": [
+        "content/igs/site.json",
+        "content/igs/provinsi.json",
+        "content/igs/insight.json",
+        "content/igs/bidang.json"
+      ],
+      "notes": "IGS views import these content files."
+    }
+  ],
+  "data": {
+    "build_script": {
+      "status": "DONE",
+      "evidence": [
+        "scripts/build-data.mjs",
+        "lib/data/index.json",
+        "lib/data/derived/"
+      ],
+      "notes": "Wired as prebuild; not separately run this session."
+    },
+    "zod_schemas": {
+      "status": "DONE",
+      "evidence": [
+        "lib/data/schemas.ts",
+        "lib/data/index.ts",
+        "pnpm test: 9 passed"
+      ],
+      "notes": "Most dataset row schemas validate generic scalar records rather than strict per-field shapes."
+    },
+    "dictionary": {
+      "status": "PARTIAL",
+      "evidence": [
+        "lib/data/DICTIONARY.md"
+      ],
+      "notes": "Documents units, null handling, and coverage limits. Independent ten-row CSV cross-check remains pending."
+    },
+    "timeseries": {
+      "status": "PARTIAL",
+      "evidence": [
+        "lib/data/timeseries.json",
+        "scripts/build-data.mjs",
+        "components/igs/YearSlider.tsx"
+      ],
+      "notes": "14 numeric metric series for 2020-2025 exist. No direct timeseries.json consumer found; categorical quadrant excluded."
+    },
+    "derived_metrics": [
+      {
+        "id": "fiscal_autonomy",
+        "status": "DONE",
+        "evidence": ["docs/igs-metrics.md", "lib/data/derived/fiscal-autonomy.json"]
+      },
+      {
+        "id": "fiscal_absorption",
+        "status": "DONE",
+        "evidence": ["docs/igs-metrics.md", "lib/data/derived/fiscal-absorption.json"]
+      },
+      {
+        "id": "capital_share",
+        "status": "DONE",
+        "evidence": ["docs/igs-metrics.md", "lib/data/derived/capital-share.json"]
+      },
+      {
+        "id": "social_share",
+        "status": "DONE",
+        "evidence": ["docs/igs-metrics.md", "lib/data/derived/social-share.json"]
+      },
+      {
+        "id": "service_access_index",
+        "status": "DONE",
+        "evidence": ["docs/igs-metrics.md", "lib/data/derived/service-access-index.json"]
+      },
+      {
+        "id": "education_quality",
+        "status": "DONE",
+        "evidence": ["docs/igs-metrics.md", "lib/data/derived/education-quality.json"]
+      },
+      {
+        "id": "welfare_composite",
+        "status": "DONE",
+        "evidence": ["docs/igs-metrics.md", "lib/data/derived/welfare-composite.json"]
+      },
+      {
+        "id": "economic_resilience",
+        "status": "DONE",
+        "evidence": ["docs/igs-metrics.md", "lib/data/derived/economic-resilience.json"]
+      },
+      {
+        "id": "governance_digital",
+        "status": "DONE",
+        "evidence": ["docs/igs-metrics.md", "lib/data/derived/governance-digital.json"]
+      },
+      {
+        "id": "procurement_efficiency",
+        "status": "DONE",
+        "evidence": ["docs/igs-metrics.md", "lib/data/derived/procurement-efficiency.json"]
+      },
+      {
+        "id": "fiscal_welfare_quadrant",
+        "status": "DONE",
+        "evidence": ["docs/igs-metrics.md", "lib/data/derived/fiscal-welfare-quadrant.json"]
+      },
+      {
+        "id": "budget_stress",
+        "status": "DONE",
+        "evidence": ["docs/igs-metrics.md", "lib/data/derived/budget-stress.json"]
+      },
+      {
+        "id": "productivity_per_capita",
+        "status": "DONE",
+        "evidence": ["docs/igs-metrics.md", "lib/data/derived/productivity-per-capita.json"]
+      },
+      {
+        "id": "dependency_ratio",
+        "status": "DONE",
+        "evidence": ["docs/igs-metrics.md", "lib/data/derived/dependency-ratio.json"]
+      },
+      {
+        "id": "composite_development_score",
+        "status": "DONE",
+        "evidence": ["docs/igs-metrics.md", "lib/data/derived/composite-development-score.json"]
+      }
+    ],
+    "cross_dataset_views": [
+      {
+        "id": "fiscal-welfare",
+        "status": "DONE",
+        "evidence": ["lib/data/derived/cross-dataset.json", "components/igs/CrossDatasetViews.tsx", "app/gov/analytics/page.tsx"],
+        "notes": "Rendered in /gov/analytics with accessible chart and details-table fallbacks."
+      },
+      {
+        "id": "budget-service",
+        "status": "DONE",
+        "evidence": ["lib/data/derived/cross-dataset.json", "components/igs/CrossDatasetViews.tsx", "app/gov/analytics/page.tsx"],
+        "notes": "Rendered in /gov/analytics with accessible chart and details-table fallbacks."
+      },
+      {
+        "id": "procurement-resilience",
+        "status": "DONE",
+        "evidence": ["lib/data/derived/cross-dataset.json", "components/igs/CrossDatasetViews.tsx", "app/gov/analytics/page.tsx"],
+        "notes": "Rendered in /gov/analytics with accessible chart and details-table fallbacks."
+      },
+      {
+        "id": "governance-poverty",
+        "status": "DONE",
+        "evidence": ["lib/data/derived/cross-dataset.json", "components/igs/CrossDatasetViews.tsx", "app/gov/analytics/page.tsx"],
+        "notes": "Rendered in /gov/analytics with accessible chart and details-table fallbacks."
+      },
+      {
+        "id": "education-unemployment",
+        "status": "DONE",
+        "evidence": ["lib/data/derived/cross-dataset.json", "components/igs/CrossDatasetViews.tsx", "app/gov/analytics/page.tsx"],
+        "notes": "Rendered in /gov/analytics with accessible chart and details-table fallbacks."
+      },
+      {
+        "id": "budget-outcome-gap",
+        "status": "DONE",
+        "evidence": ["lib/data/derived/cross-dataset.json", "components/igs/CrossDatasetViews.tsx", "app/gov/analytics/page.tsx"],
+        "notes": "Rendered in /gov/analytics with accessible chart and details-table fallbacks."
+      },
+      {
+        "id": "regional-trends",
+        "status": "DONE",
+        "evidence": ["lib/data/derived/cross-dataset.json", "components/igs/CrossDatasetViews.tsx", "app/gov/analytics/page.tsx"],
+        "notes": "Rendered in /gov/analytics with accessible chart and details-table fallbacks."
+      },
+      {
+        "id": "quadrant-timeline",
+        "status": "DONE",
+        "evidence": ["lib/data/derived/cross-dataset.json", "components/igs/CrossDatasetViews.tsx", "app/gov/analytics/page.tsx"],
+        "notes": "Rendered in /gov/analytics with accessible chart and details-table fallbacks."
+      }
+    ]
+  },
+  "routes": [
+    {
+      "path": "/gov",
+      "status": "DONE",
+      "evidence": ["app/gov/page.tsx"],
+      "notes": "Route source exists; production curl returned HTTP 200 in Session #2."
+    },
+    {
+      "path": "/gov/dashboard",
+      "status": "DONE",
+      "evidence": ["app/gov/dashboard/page.tsx"],
+      "notes": "Route source exists; production curl returned HTTP 200 in Session #2."
+    },
+    {
+      "path": "/gov/analytics",
+      "status": "DONE",
+      "evidence": ["app/gov/analytics/page.tsx"],
+      "notes": "Route source exists; production curl returned HTTP 200 in Session #2."
+    },
+    {
+      "path": "/gov/pemerintahan",
+      "status": "DONE",
+      "evidence": ["app/gov/pemerintahan/page.tsx"]
+    },
+    {
+      "path": "/gov/ekonomi",
+      "status": "DONE",
+      "evidence": ["app/gov/ekonomi/page.tsx"]
+    },
+    {
+      "path": "/gov/pendidikan",
+      "status": "DONE",
+      "evidence": ["app/gov/pendidikan/page.tsx"]
+    },
+    {
+      "path": "/gov/sosial-publik",
+      "status": "DONE",
+      "evidence": ["app/gov/sosial-publik/page.tsx"]
+    },
+    {
+      "path": "/gov/daerah",
+      "status": "DONE",
+      "evidence": ["app/gov/daerah/page.tsx"]
+    },
+    {
+      "path": "/gov/perbandingan",
+      "status": "DONE",
+      "evidence": ["app/gov/perbandingan/page.tsx"]
+    },
+    {
+      "path": "/gov/pencarian",
+      "status": "DONE",
+      "evidence": ["app/gov/pencarian/page.tsx"]
+    },
+    {
+      "path": "/gov/provinsi/[kode]",
+      "status": "DONE",
+      "evidence": ["app/gov/provinsi/[kode]/page.tsx"],
+      "notes": "generateStaticParams exists; /gov/provinsi/11 returned HTTP 200 in production."
+    },
+    {
+      "path": "/gov/kabkota/[kode]",
+      "status": "DONE",
+      "evidence": ["app/gov/kabkota/[kode]/page.tsx"],
+      "notes": "generateStaticParams exists; /gov/kabkota/11.71 returned HTTP 200 in production."
+    }
+  ],
+  "maps": [
+    {
+      "feature": "GeoJSON pipeline and ECharts registerMap",
+      "status": "DONE",
+      "evidence": [
+        "scripts/build-geo.mjs",
+        "lib/data/geo/provinces.geojson",
+        "lib/data/geo/kabkota.geojson",
+        "lib/data/geo/manifest.json",
+        "components/igs/GeoMapBoot.tsx"
+      ],
+      "notes": "Current assets parse as 34 province and 84 kab/kota features; simplification string is recorded in manifest."
+    },
+    {
+      "feature": "Social-public province choropleth",
+      "status": "DONE",
+      "evidence": ["components/igs/GovTopicView.tsx", "components/igs/GovChoropleth.tsx", "components/igs/GeoMapBoot.tsx"]
+    },
+    {
+      "feature": "Daerah procurement choropleth",
+      "status": "DONE",
+      "evidence": ["components/igs/GovTopicView.tsx", "components/igs/GovChoropleth.tsx", "components/igs/GeoMapBoot.tsx"]
+    },
+    {
+      "feature": "Province peer choropleth/highlight",
+      "status": "DONE",
+      "evidence": ["components/igs/GovEntityPage.tsx", "components/igs/GeoMapBoot.tsx"]
+    }
+  ],
+  "chart_inventory": [
+    {"type": "bar", "present": true, "status": "DONE", "evidence": "components/igs/MetricChart.tsx"},
+    {"type": "grouped bar", "present": false, "status": "NOT_STARTED", "evidence": "No separate implementation; docs/igs-qa.md Chart type notes records intentional exclusion as a bar variant."},
+    {"type": "stacked bar", "present": false, "status": "NOT_STARTED", "evidence": "No separate implementation; docs/igs-qa.md Chart type notes records intentional exclusion as a bar configuration."},
+    {"type": "horizontal bar", "present": false, "status": "NOT_STARTED", "evidence": "No separate implementation; docs/igs-qa.md Chart type notes records intentional exclusion as a bar orientation."},
+    {"type": "line", "present": true, "status": "DONE", "evidence": "components/igs/MetricChart.tsx"},
+    {"type": "multi-line", "present": true, "status": "DONE", "evidence": "components/igs/GovTopicInventory.tsx ridgeline series"},
+    {"type": "area", "present": true, "status": "DONE", "evidence": "components/igs/MetricChart.tsx"},
+    {"type": "sparkline", "present": false, "status": "NOT_STARTED", "evidence": "No separate implementation; docs/igs-qa.md Chart type notes records intentional exclusion as a line variant."},
+    {"type": "scatter", "present": true, "status": "DONE", "evidence": "components/igs/MetricChart.tsx"},
+    {"type": "bubble", "present": true, "status": "DONE", "evidence": "components/igs/TemporalArchipelagoScene.tsx"},
+    {"type": "treemap", "present": true, "status": "DONE", "evidence": "components/igs/GovTopicInventory.tsx"},
+    {"type": "sunburst", "present": true, "status": "DONE", "evidence": "components/igs/GovTopicInventory.tsx; browser rendered hierarchy and 190-row details table."},
+    {"type": "radar", "present": true, "status": "DONE", "evidence": "components/igs/GovTopicInventory.tsx"},
+    {"type": "heatmap", "present": true, "status": "DONE", "evidence": "components/igs/GovTopicInventory.tsx and GovCorrelationHeatmap.tsx"},
+    {"type": "parallel coordinates", "present": true, "status": "DONE", "evidence": "components/igs/GovTopicInventory.tsx"},
+    {"type": "boxplot", "present": true, "status": "DONE", "evidence": "components/igs/GovTopicInventory.tsx"},
+    {"type": "violin", "present": true, "status": "DONE", "evidence": "components/igs/GovTopicInventory.tsx; six island groups and 38 source observations in browser."},
+    {"type": "Sankey", "present": true, "status": "DONE", "evidence": "components/igs/GovTopicInventory.tsx"},
+    {"type": "chord", "present": true, "status": "DONE", "evidence": "components/igs/GovTopicInventory.tsx; circular province-contractor graph and details table."},
+    {"type": "network", "present": true, "status": "DONE", "evidence": "components/igs/GovTopicInventory.tsx ECharts graph"},
+    {"type": "choropleth", "present": true, "status": "DONE", "evidence": "components/igs/GeoMapBoot.tsx"},
+    {"type": "waterfall", "present": true, "status": "DONE", "evidence": "components/igs/GovTopicInventory.tsx"},
+    {"type": "gauge", "present": true, "status": "DONE", "evidence": "components/igs/FetchQualityGauges.tsx; three gauges and details table; no session snapshot was present, so numeric fallback stayed unavailable."},
+    {"type": "ridge/stream", "present": true, "status": "DONE", "evidence": "components/igs/GovTopicInventory.tsx KDE ridgeline"},
+    {"type": "Venn", "present": true, "status": "DONE", "evidence": "components/igs/GovTopicInventory.tsx custom SVG; @visx/venn not installed"}
+  ],
+  "three_js": [
+    {
+      "feature": "TemporalArchipelagoScene on /gov",
+      "status": "DONE",
+      "evidence": ["components/igs/GovOverview.tsx", "components/igs/TemporalArchipelagoScene.tsx"]
+    },
+    {
+      "feature": "TemporalArchipelagoScene on /gov/dashboard",
+      "status": "DONE",
+      "evidence": ["components/igs/GovDashboardView.tsx", "components/igs/TemporalArchipelagoScene.tsx"]
+    },
+    {
+      "feature": "TrajectoryFlowScene on /gov/analytics",
+      "status": "DONE",
+      "evidence": ["components/igs/GovAnalyticsView.tsx", "components/igs/TrajectoryFlowScene.tsx"]
+    },
+    {
+      "feature": "Persistent YearSlider",
+      "status": "DONE",
+      "evidence": ["components/igs/GovLayoutProviders.tsx", "components/igs/YearSlider.tsx", "components/igs/GovYearProvider.tsx"]
+    },
+    {
+      "feature": "Reduced-motion and low-memory fallback",
+      "status": "DONE",
+      "evidence": ["components/igs/useSceneRuntime.ts", "components/igs/TemporalArchipelagoScene.tsx", "components/igs/TrajectoryFlowScene.tsx"],
+      "notes": "Code verified; browser fallback not tested this session."
+    }
+  ],
+  "cross_cutting": [
+    {
+      "feature": "Accessibility: title, desc, aria-label, details table",
+      "status": "PARTIAL",
+      "evidence": ["components/igs/EChartPanel.tsx", "components/igs/MetricChart.tsx", "components/igs/GovTopicInventory.tsx"],
+      "notes": "New chart headings and details fallbacks were checked in browser; complete screen-reader/per-page audit remains pending."
+    },
+    {
+      "feature": "Reduced-motion fallback",
+      "status": "DONE",
+      "evidence": ["components/igs/useSceneRuntime.ts"]
+    },
+    {
+      "feature": "Mobile drawer and TheThread hidden below desktop",
+      "status": "PARTIAL",
+      "evidence": ["components/layout/MobileSidebar.tsx", "components/igs/YearSlider.tsx", "components/layout/TheThread.tsx"],
+      "notes": "Source exists; no viewport check this session."
+    },
+    {
+      "feature": "Typecheck",
+      "status": "DONE",
+      "evidence": ["pnpm typecheck: PASS, tsc --noEmit exit 0"]
+    },
+    {
+      "feature": "Lint",
+      "status": "DONE",
+      "evidence": ["pnpm lint: PASS, no warnings/errors"]
+    },
+    {
+      "feature": "Build",
+      "status": "DONE",
+      "evidence": ["pnpm build: PASS; static generation completed for 162 pages; optimized /gov/analytics route chunk 6.04 kB and First Load JS 108 kB"]
+    },
+    {
+      "feature": "Tests",
+      "status": "DONE",
+      "evidence": ["pnpm test: 2 files, 9 tests passed"]
+    },
+    {
+      "feature": "Production route HTTP checks",
+      "status": "DONE",
+      "evidence": ["pnpm start + curl.exe: 12 requested /gov routes and / all returned HTTP 200; production server stopped."]
+    },
+    {
+      "feature": "Lighthouse and manual data/screen-reader UAT",
+      "status": "NOT_STARTED",
+      "evidence": ["Manual check pending."]
+    }
+  ],
+  "validation": [
+    {
+      "command": "pnpm typecheck",
+      "status": "PASS",
+      "result": "tsc --noEmit; exit code 0.",
+      "run_date": "2026-10-31"
+    },
+    {
+      "command": "pnpm lint",
+      "status": "PASS",
+      "result": "next lint; No ESLint warnings or errors; exit code 0.",
+      "run_date": "2026-10-31"
+    },
+    {
+      "command": "pnpm test",
+      "status": "PASS",
+      "result": "2 test files, 9 tests passed.",
+      "run_date": "2026-10-31"
+    },
+    {
+      "command": "pnpm build",
+      "status": "PASS",
+      "result": "Optimized build passed; Next.js generated 162 static pages. /gov/analytics route chunk 6.04 kB; First Load JS 108 kB, down from 610 kB.",
+      "run_date": "2026-10-31"
+    },
+    {
+      "command": "pnpm start + curl.exe",
+      "status": "PASS",
+      "result": "HTTP 200: /gov, /gov/dashboard, /gov/analytics, /gov/pemerintahan, /gov/ekonomi, /gov/pendidikan, /gov/sosial-publik, /gov/daerah, /gov/perbandingan, /gov/pencarian, /gov/provinsi/11, /gov/kabkota/11.71, /.",
+      "run_date": "2026-10-31"
+    },
+    {
+      "command": "Browser chart verification",
+      "status": "PASS",
+      "result": "Sunburst, chord-style graph, violin, gauges, and analytics cross-dataset section rendered with details tables; no /fetch snapshot was available.",
+      "run_date": "2026-10-31"
+    },
+    {
+      "command": "node local artifact count",
+      "status": "PASS",
+      "result": "34 province GeoJSON features; 84 kab/kota features; 15 metric definitions; 14 timeseries metrics (2020-2025); 8 cross-dataset views.",
+      "run_date": "2026-10-31"
+    }
+  ],
+  "blockers": [
+    "Checked-in context/masterprompt-v1.md is legacy IRN material: §6.1 is IndonesiaFlowScene, §6.2 is PublisherNetworkScene, §8 is Performance & Accessibility. It does not specify the referenced IGS metric/view/chart inventories.",
+    "Grouped bar, stacked bar, horizontal bar, and sparkline are intentionally not separate implementations; see docs/igs-qa.md Chart type notes.",
+    "Lighthouse and real-world performance validation remain pending.",
+    "Gauge values require a valid last /fetch snapshot; the browser verification session had none, so the fallback correctly showed unavailable values rather than sample numbers.",
+    "RootShell exists but does not accept an explicit mode prop.",
+    "The pre-existing dirty worktree includes unrelated IRN edits; do not stage or commit them without user approval.",
+    "The schema from the referenced earlier pause prompt was unavailable in the resumed context; this JSON uses explicit structured fields from the current request."
+  ],
+  "next_actions": [
+    "Run Lighthouse to measure real-world performance after reducing /gov/analytics First Load JS to 108 kB.",
+    "Complete manual accessibility/screen-reader review, ten-row CSV spot-check, and verify gauges with a real /fetch session snapshot.",
+    "Resolve the legacy masterprompt/source-of-truth mismatch."
+  ],
+  "sessions": [
+    {
+      "id": 2,
+      "date": "2026-10-31",
+      "title": "Cross-dataset views and chart gaps",
+      "completed": [
+        "Rendered all eight cross-dataset views on /gov/analytics with chart-specific presentation and table fallbacks.",
+        "Added sunburst, circular province-contractor graph, three quality gauges, and violin density chart.",
+        "Verified pnpm typecheck, pnpm lint, pnpm test (9 passed), pnpm build, browser chart rendering, and 13 production URLs returning HTTP 200."
+      ],
+      "notes": [
+        "No /fetch snapshot existed during browser verification; gauge values remained unavailable rather than showing fabricated sample numbers.",
+        "No commit was created and no IRN/content-extraction paths were changed."
+      ]
+    },
+    {
+      "id": 3,
+      "date": "2026-10-31",
+      "title": "Analytics bundle optimization",
+      "completed": [
+        "Diagnosed 388 kB route / 610 kB First Load JS; found echarts-for-react default full-ECharts entry and static analytics chart imports as main route contributors.",
+        "Switched EChartPanel to echarts/core with explicitly registered chart, component, and renderer modules through echarts-for-react/lib/core.",
+        "Moved CrossDatasetViews, FetchQualityGauges, and MetricChart to asynchronous imports; preserved the existing dynamic heatmap and Three.js scene.",
+        "Reduced /gov/analytics route chunk to 6.04 kB and First Load JS to 108 kB; preserved charts."
+      ],
+      "notes": [
+        "pnpm typecheck, pnpm lint, and pnpm build passed.",
+        "Production browser verified eight cross-dataset cards, gauges, scatter, 10 rendered ECharts SVGs, and 12 details fallbacks; changed routes returned HTTP 200.",
+        "No commit was created."
+      ]
+    }
+  ]
+}

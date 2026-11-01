@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Undated Publisher</title>
+    <item>
+      <title>Undated headline</title>
+      <link>https://undated.example/story/1</link>
+      <description>No date is provided.</description>
+    </item>
+  </channel>
+</rss>

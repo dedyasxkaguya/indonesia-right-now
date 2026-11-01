@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Example Publisher</title>
+    <item>
+      <title>Example headline</title>
+      <link>https://news.example/article?id=1&amp;utm_source=rss</link>
+      <pubDate>Mon, 19 Oct 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<p>First <b>summary</b>.</p>]]></description>
+      <category>economy</category>
+      <author>Reporter</author>
+      <content:encoded xmlns:content="http://purl.org/rss/1.0/modules/content/"><![CDATA[<p>A longer article body from the feed.</p>]]></content:encoded>
+    </item>
+  </channel>
+</rss>

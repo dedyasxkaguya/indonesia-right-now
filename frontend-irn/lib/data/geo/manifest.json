@@ -1,0 +1,24 @@
+{
+  "province_source": "https://raw.githubusercontent.com/ans-4175/peta-indonesia-geojson/76057b332ff707dff8517b728a49bd9b7b52d471/indonesia-prov.geojson",
+  "province_source_commit": "76057b332ff707dff8517b728a49bd9b7b52d471",
+  "province_features": 34,
+  "csv_province_codes": 38,
+  "csv_province_codes_without_source_geometry": [
+    "93",
+    "94",
+    "95",
+    "96"
+  ],
+  "kabkota_source": "yusufsyaifudin/wilayah-indonesia@54c4f4003292c39e5033ccc3b4df886bafa42046",
+  "kabkota_features": 84,
+  "csv_kabkota_codes": 90,
+  "csv_kabkota_codes_without_source_geometry": [
+    "17.71",
+    "36.73",
+    "36.74",
+    "64.08",
+    "73.24",
+    "96.71"
+  ],
+  "simplification": "mapshaper -simplify 5% keep-shapes"
+}

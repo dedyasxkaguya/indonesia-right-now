@@ -1,0 +1,444 @@
+{
+  "ok": true,
+  "data": {
+    "url": "https://www.youtube.com/results?search_query=indonesia news",
+    "final_url": "https://www.youtube.com/results?search_query=indonesia+news",
+    "mode": "text",
+    "engine": "playwright",
+    "title": "indonesia news - YouTube",
+    "truncated": false,
+    "length": 14213,
+    "http_status": 200,
+    "screenshot_png_base64": null,
+    "duration_ms": 19173.6,
+    "news_items": [
+      {
+        "id": "34cc1dd23b63e11d",
+        "title": "🔴BREAKING NEWS - UPDATE TERKINI DARI ISTANA KEPRESIDENAN (26/10)",
+        "snippet": null,
+        "url": null,
+        "source_name": "Seputar iNews RCTI",
+        "source_verified": false,
+        "published_text": "20 jam lalu",
+        "duration_text": "3.05",
+        "views_text": "86 rb",
+        "badges": [
+          "BREAKING",
+          "LIVE",
+          "BARU",
+          "POPULER"
+        ],
+        "extras": {
+
+        }
+      },
+      {
+        "id": "6311675fdc1e244e",
+        "title": "🔴BREAKING NEWS - Pengangkatan Warga Kehormatan Korpasgat TNI AU",
+        "snippet": null,
+        "url": null,
+        "source_name": "KOMPASTV",
+        "source_verified": false,
+        "published_text": "1 jam lalu",
+        "duration_text": "8.09",
+        "views_text": "28 rb",
+        "badges": [
+          "BREAKING",
+          "LIVE",
+          "BARU"
+        ],
+        "extras": {
+
+        }
+      },
+      {
+        "id": "9afbcd0d2b97bd05",
+        "title": "🔴BREAKING NEWS UPDATE TERKINI POLEMIK IJAZAH GIBRAN & PENANGANAN KARHUTLA",
+        "snippet": null,
+        "url": null,
+        "source_name": "Official iNews",
+        "source_verified": false,
+        "published_text": "5 jam lalu",
+        "duration_text": "10.15",
+        "views_text": "20 rb",
+        "badges": [
+          "BREAKING",
+          "LIVE",
+          "BARU"
+        ],
+        "extras": {
+
+        }
+      },
+      {
+        "id": "04875bdfd51add17",
+        "title": "Indonesia Resmi Pangkas Ekspor Gas ke Singapura",
+        "snippet": null,
+        "url": null,
+        "source_name": "CNBC Indonesia",
+        "source_verified": false,
+        "published_text": "1 jam lalu",
+        "duration_text": "1.27",
+        "views_text": "17 rb",
+        "badges": [
+          "BARU"
+        ],
+        "extras": {
+
+        }
+      },
+      {
+        "id": "c849202d7cbcedf9",
+        "title": "Politisi Singapura Ancam Potong Kabel Internet RI seusai Pasokan Gas Dipangkas, Langsung Klarifikasi",
+        "snippet": null,
+        "url": null,
+        "source_name": "Tribunnews",
+        "source_verified": false,
+        "published_text": "2 jam lalu",
+        "duration_text": "9.45",
+        "views_text": "5,9 rb",
+        "badges": [
+          "BARU"
+        ],
+        "extras": {
+
+        }
+      },
+      {
+        "id": "256252ac206a262c",
+        "title": "Arab Saudi Keluarkan Peringatan Bahaya di Makkah & Jeddah",
+        "snippet": null,
+        "url": null,
+        "source_name": "CNN Indonesia",
+        "source_verified": false,
+        "published_text": "1 jam lalu",
+        "duration_text": "30.15",
+        "views_text": "106 rb",
+        "badges": [
+          "BARU"
+        ],
+        "extras": {
+
+        }
+      },
+      {
+        "id": "b9cbd45ac8b685d5",
+        "title": "Indonesia Pangkas Ekspor Gas, PM Singapura Respons Begini | OneNews Update",
+        "snippet": null,
+        "url": null,
+        "source_name": "tvOneNews",
+        "source_verified": false,
+        "published_text": "21 jam lalu",
+        "duration_text": "1.25.19",
+        "views_text": "22 rb",
+        "badges": [
+          "BARU"
+        ],
+        "extras": {
+
+        }
+      },
+      {
+        "id": "ab691592d0a3411d",
+        "title": "[FULL] Apa Kabar Indonesia Malam (25/10/2026) | tvOne",
+        "snippet": null,
+        "url": null,
+        "source_name": "tvOneNews",
+        "source_verified": false,
+        "published_text": "1 jam lalu",
+        "duration_text": "58.30",
+        "views_text": "19 rb",
+        "badges": [
+          "BARU"
+        ],
+        "extras": {
+
+        }
+      },
+      {
+        "id": "2849f70b7ebdf6de",
+        "title": "RESMI! RI Pangkas Ekspor Gas ke Singapura Mulai Hari Ini, Bahlil Beri Sinyal Tegas!",
+        "snippet": null,
+        "url": null,
+        "source_name": "Official iNews",
+        "source_verified": false,
+        "published_text": "2 jam lalu",
+        "duration_text": null,
+        "views_text": "112 rb",
+        "badges": [
+          "BARU"
+        ],
+        "extras": {
+
+        }
+      },
+      {
+        "id": "bc374446ff8b51e2",
+        "title": "Manusia paling tua di dunia hidup sejak Kesultana Utsmaniyah - BBC News Indonesia",
+        "snippet": null,
+        "url": null,
+        "source_name": "BBC News Indonesia",
+        "source_verified": false,
+        "published_text": null,
+        "duration_text": null,
+        "views_text": "17 rb",
+        "badges": [
+          "SHORTS",
+          "BARU"
+        ],
+        "extras": {
+
+        }
+      },
+      {
+        "id": "81fd6bdc6d7875c6",
+        "title": "Netanyahu Ancam Serang Iran dengan Kekuatan Penuh Jika Ganggu Pemilu Israel",
+        "snippet": null,
+        "url": null,
+        "source_name": null,
+        "source_verified": false,
+        "published_text": null,
+        "duration_text": null,
+        "views_text": "8,9 rb",
+        "badges": [
+          "SHORTS",
+          "BARU"
+        ],
+        "extras": {
+
+        }
+      },
+      {
+        "id": "d28110fc05304df0",
+        "title": "Disentil Negara Tetangga soal Karhutla, Zulhas: Bahaya kalau Indonesia Marah!",
+        "snippet": null,
+        "url": null,
+        "source_name": null,
+        "source_verified": false,
+        "published_text": null,
+        "duration_text": null,
+        "views_text": "11 rb",
+        "badges": [
+          "SHORTS",
+          "BARU"
+        ],
+        "extras": {
+
+        }
+      },
+      {
+        "id": "96bd3330f4180e28",
+        "title": "YUSRIL SEBUT PRABOWO BELUM SETUJU SOAL USULAN DEFINISI KORUPSI DEN",
+        "snippet": null,
+        "url": null,
+        "source_name": null,
+        "source_verified": false,
+        "published_text": null,
+        "duration_text": null,
+        "views_text": "604",
+        "badges": [
+          "SHORTS",
+          "BARU"
+        ],
+        "extras": {
+
+        }
+      },
+      {
+        "id": "7734d715bbadb315",
+        "title": "Makam leluhur 'Liang Batu' di Toraja diduga dibakar OTK, puluhan jasad terdampak",
+        "snippet": null,
+        "url": null,
+        "source_name": null,
+        "source_verified": false,
+        "published_text": null,
+        "duration_text": null,
+        "views_text": null,
+        "badges": [
+          "SHORTS",
+          "BARU"
+        ],
+        "extras": {
+
+        }
+      },
+      {
+        "id": "a8b5fcb35af1c4c7",
+        "title": "[FULL] Apa Kabar Indonesia Malam (26/10/2026) | tvOne",
+        "snippet": null,
+        "url": null,
+        "source_name": "tvOneNews",
+        "source_verified": false,
+        "published_text": null,
+        "duration_text": "1.27.54",
+        "views_text": null,
+        "badges": [
+          "BARU"
+        ],
+        "extras": {
+
+        }
+      },
+      {
+        "id": "688ce33401f80fa5",
+        "title": "Pangkas Ekspor Gas, PM Singapura Respons Begini | OneNews",
+        "snippet": null,
+        "url": "https://www.tvonenews.com/",
+        "source_name": "tvOneNews",
+        "source_verified": false,
+        "published_text": null,
+        "duration_text": null,
+        "views_text": null,
+        "badges": [
+          "BARU"
+        ],
+        "extras": {
+
+        }
+      },
+      {
+        "id": "35285ab97b6b9d44",
+        "title": "Dampak Pengurangan Ekspor Gas Indonesia ke Singapura: Siapa Lebih Diuntungkan?",
+        "snippet": null,
+        "url": null,
+        "source_name": "TribunJakarta Official",
+        "source_verified": false,
+        "published_text": "18 jam lalu",
+        "duration_text": "1.49",
+        "views_text": "35 rb",
+        "badges": [
+          "BARU"
+        ],
+        "extras": {
+
+        }
+      },
+      {
+        "id": "1f1e7a92e78cacf8",
+        "title": "Ekonom AS Sindir Presiden RI seusai Tegaskan Indonesia Tak Gentar Hadapi MSCI, Sebut Prabowo Delusi",
+        "snippet": null,
+        "url": null,
+        "source_name": "Tribunnews",
+        "source_verified": false,
+        "published_text": "18 jam lalu",
+        "duration_text": "1.30",
+        "views_text": "153 rb",
+        "badges": [
+          "BARU"
+        ],
+        "extras": {
+
+        }
+      },
+      {
+        "id": "4b93a61f3787eed8",
+        "title": "Singapura Pertimbangkan Energi Nuklir usai Indonesia Pangkas Ekspor Gas | IDXC UPDATE",
+        "snippet": null,
+        "url": null,
+        "source_name": "IDX CHANNEL",
+        "source_verified": false,
+        "published_text": "1 h lalu",
+        "duration_text": "10.50",
+        "views_text": "20 rb",
+        "badges": [
+          "BARU"
+        ],
+        "extras": {
+
+        }
+      },
+      {
+        "id": "6d77d0c9d1c04d02",
+        "title": "Indonesia Pangkas Ekspor Gas ke Singapura, Negeri Singa Klaim Tak Kekurangan Pasokan",
+        "snippet": null,
+        "url": null,
+        "source_name": "Kompas.com",
+        "source_verified": false,
+        "published_text": "2 h lalu",
+        "duration_text": "2.30",
+        "views_text": "72 rb",
+        "badges": [
+          "BARU"
+        ],
+        "extras": {
+
+        }
+      },
+      {
+        "id": "90c11b3aa52b0d44",
+        "title": "BERKAH DI TENGAH KARHUTLA! Hujan Deras Guyur Kalimantan, Kabut Asap Mulai Menipis |iNews Today 26/10",
+        "snippet": null,
+        "url": null,
+        "source_name": "Official iNews",
+        "source_verified": false,
+        "published_text": "1 h lalu",
+        "duration_text": "11.09",
+        "views_text": "107 rb",
+        "badges": [
+          "BARU"
+        ],
+        "extras": {
+
+        }
+      },
+      {
+        "id": "e5f32fd5ca0cec45",
+        "title": "[FULL] Apa Kabar Indonesia Siang (27/10/2026) | tvOne",
+        "snippet": null,
+        "url": null,
+        "source_name": "tvOneNews",
+        "source_verified": false,
+        "published_text": "23 mnt lalu",
+        "duration_text": null,
+        "views_text": "289",
+        "badges": [],
+        "extras": {
+
+        }
+      }
+    ],
+    "raw": null,
+    "ai": {
+      "guard_status": "error",
+      "guard_confidence": 0,
+      "chunks_total": 5,
+      "chunks_ok": 2,
+      "chunks_failed": 3,
+      "items_raw": 22,
+      "items_kept": 22,
+      "items_omitted": 0,
+      "deduped": 0,
+      "language": "id",
+      "model": "openai/gpt-oss-120b",
+      "cached": false,
+      "duration_ms": 9705
+    },
+    "saved": {
+      "written": true,
+      "path": "output\\ai\\ai_youtube_com_2026-10-27_083205.json",
+      "filename": "ai_youtube_com_2026-10-27_083205.json"
+    }
+  },
+  "error": null,
+  "meta": {
+    "request_id": "01a17afc-1fa9-7e2b-b578-e4bf69dd64f7",
+    "duration_ms": 19173.64,
+    "service": "indonesia-right-now",
+    "version": "0.1.0",
+    "ai": {
+      "guard_status": "error",
+      "guard_confidence": 0,
+      "chunks_total": 5,
+      "chunks_ok": 2,
+      "chunks_failed": 3,
+      "items_raw": 22,
+      "items_kept": 22,
+      "items_omitted": 0,
+      "deduped": 0,
+      "language": "id",
+      "model": "openai/gpt-oss-120b",
+      "cached": false,
+      "duration_ms": 9705
+    }
+  }
+}

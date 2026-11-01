@@ -1,0 +1,12 @@
+{
+  "name": "indonesia-right-now",
+  "subtitle": "",
+  "description": "Pantau aliran berita Indonesia melalui data dari sumber yang tersedia.",
+  "favicon": "/favicon-irn.svg",
+  "sidebar": [
+    { "section": "BERITA", "items": [{ "label": "Beranda", "href": "/", "icon": "home" }, { "label": "Hari Ini", "href": "/hari-ini", "icon": "clock" }, { "label": "Artikel", "href": "/artikel", "icon": "newspaper" }] },
+    { "section": "ANALITIK", "items": [{ "label": "Dashboard", "href": "/dashboard", "icon": "dashboard" }, { "label": "Analitik", "href": "/analitik", "icon": "chart" }, { "label": "Publisher", "href": "/publisher", "icon": "building" }, { "label": "Bandingkan", "href": "/bandingkan", "icon": "compare" }] },
+    { "section": "TOOLS", "items": [{ "label": "Analisis URL", "href": "/analisis-url", "icon": "link" }, { "label": "Notebook", "href": "/notebook", "icon": "book" }] },
+    { "section": "PERSONAL", "items": [{ "label": "Tersimpan", "href": "/tersimpan", "icon": "bookmark" }] }
+  ]
+}

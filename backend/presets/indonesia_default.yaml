@@ -1,0 +1,248 @@
+# Source preset for the indonesia-right-now /news endpoint.
+# Policy: community-first. Reddit and community/publisher feeds are the
+# default enabled set. Government (.go.id) feeds are DISABLED — see below.
+# Disabled entries are kept (not deleted) so they can be re-enabled after
+# formal clearance. See note-update.md at the repo root.
+
+sources:
+  # --- Community (Reddit) ---------------------------------------------------
+  - name: Reddit Indonesia
+    url: https://www.reddit.com/r/indonesia/new/.rss
+    category: indonesia
+    enabled: true
+  - name: Reddit Jakarta
+    url: https://www.reddit.com/r/jakarta/new/.rss
+    category: jakarta
+    enabled: true
+  - name: Reddit Bali
+    url: https://www.reddit.com/r/bali/new/.rss
+    category: bali
+    enabled: true
+  - name: Reddit Surabaya
+    url: https://www.reddit.com/r/surabaya/new/.rss
+    category: surabaya
+    enabled: true
+  - name: Reddit Bandung
+    url: https://www.reddit.com/r/bandung/new/.rss
+    category: bandung
+    enabled: true
+  - name: Reddit Yogyakarta
+    url: https://www.reddit.com/r/yogyakarta/new/.rss
+    category: yogyakarta
+    enabled: true
+  - name: Reddit Medan
+    url: https://www.reddit.com/r/medan/new/.rss
+    category: medan
+    enabled: true
+  - name: Reddit Aceh
+    url: https://www.reddit.com/r/aceh/new/.rss
+    category: aceh
+    enabled: true
+  - name: Reddit Indonesia Travel
+    url: https://www.reddit.com/r/IndonesiaTravel/new/.rss
+    category: travel_indonesia
+    enabled: true
+  - name: Reddit Indonesia Gaming
+    url: https://www.reddit.com/r/IndoGamer/new/.rss
+    category: gaming_indonesia
+    enabled: true
+  - name: Reddit Indonesia Technology
+    url: https://www.reddit.com/r/indotech/new/.rss
+    category: technology_indonesia
+    enabled: true
+  - name: Reddit Indonesia Music
+    url: https://www.reddit.com/r/indonesianmusic/new/.rss
+    category: culture_indonesia
+    enabled: true
+  - name: Reddit ASEAN
+    url: https://www.reddit.com/r/ASEAN/new/.rss
+    category: regional
+    enabled: true
+
+  # --- Publishers / community publishers ------------------------------------
+  - name: ANTARA - Explore Indonesia
+    url: https://en.antaranews.com/rss/explore-indonesia.xml
+    category: culture_tourism
+    enabled: true
+  - name: ANTARA - Press Release
+    url: https://en.antaranews.com/rss/press-release.xml
+    category: public_announcements
+    enabled: true
+  - name: Hacker News
+    url: https://news.ycombinator.com/rss
+    category: technology
+    enabled: true
+    # notes: international source; filter results with Indonesia keywords.
+  - name: GitHub Trending
+    url: https://github.com/trending.atom
+    category: open_source
+    enabled: true
+    # notes: international source; prioritize Indonesia-relevant projects.
+
+  # --- Local organizations (not government) ---------------------------------
+  - name: MOI Malang - Pemerintahan
+    url: https://malang.moi.or.id/rss/category-id/3
+    category: local_government
+    enabled: true
+  - name: MOI Malang - Lingkungan
+    url: https://malang.moi.or.id/rss/category-id/8
+    category: environment
+    enabled: true
+  - name: MOI Malang - Sosial
+    url: https://malang.moi.or.id/rss/category-id/9
+    category: society
+    enabled: true
+  - name: MOI Malang - Infrastruktur
+    url: https://malang.moi.or.id/rss/category-id/24
+    category: infrastructure
+    enabled: true
+  - name: MOI Malang - Ekonomi
+    url: https://malang.moi.or.id/rss/category-id/33
+    category: economy
+    enabled: true
+  - name: MOI Malang - Pendidikan
+    url: https://malang.moi.or.id/rss/category-id/12
+    category: education
+    enabled: true
+  - name: MOI Malang - Transportasi
+    url: https://malang.moi.or.id/rss/category-id/67
+    category: transportation
+    enabled: true
+  - name: MOI Malang - Teknologi
+    url: https://malang.moi.or.id/rss/category-id/29
+    category: technology_indonesia
+    enabled: true
+  - name: MOI Malang - Pertanian
+    url: https://malang.moi.or.id/rss/category-id/26
+    category: agriculture
+    enabled: true
+  - name: MOI Malang - Aspirasi Warga
+    url: https://malang.moi.or.id/rss/category-id/39
+    category: public_feedback
+    enabled: true
+  - name: MOI Malang - Bencana dan Kehutanan
+    url: https://malang.moi.or.id/rss/category-id/84
+    category: environment
+    enabled: true
+
+  # --- Legacy publisher feeds (superseded by the community-first policy) ----
+  # reason: superseded by the Reddit/community-first source policy; kept for
+  # rollback. Re-enable only if the source policy is revised.
+  - name: Antara (legacy terkini)
+    url: https://www.antaranews.com/rss/terkini
+    category: indonesia
+    enabled: false
+  - name: CNN Indonesia
+    url: https://www.cnnindonesia.com/nasional/rss
+    category: politics
+    enabled: false
+  - name: Kompas
+    url: https://rss.kompas.com/
+    category: indonesia
+    enabled: false
+  - name: Tempo
+    url: https://rss.tempo.co/nasional
+    category: politics
+    enabled: false
+  - name: Detik
+    url: https://rss.detik.com/
+    category: indonesia
+    enabled: false
+  - name: CNBC Indonesia
+    url: https://www.cnbcindonesia.com/news/rss
+    category: economy
+    enabled: false
+  - name: Bisnis.com
+    url: https://bisnis.com/rss
+    category: economy
+    enabled: false
+  - name: Katadata
+    url: https://katadata.co.id/rss
+    category: economy
+    enabled: false
+  - name: Tirto
+    url: https://tirto.id/rss
+    category: indonesia
+    enabled: false
+  - name: Kumparan
+    url: https://kumparan.com/rss
+    category: indonesia
+    enabled: false
+
+  # --- Disabled government feeds --------------------------------------------
+  # reason: journalism/corporate policy forbids use of government news URLs
+  # in this project. Re-enable only after formal clearance. The frontend
+  # MUST NOT re-enable these sources (see note-update.md).
+  - name: Kementerian Kesehatan - Rilis Berita
+    url: https://kemkes.go.id/id/rss/article/rilis-berita
+    category: health
+    enabled: false
+  - name: Kementerian Kesehatan - Kegiatan
+    url: https://kemkes.go.id/id/rss/article/kegiatan-kemenkes
+    category: government
+    enabled: false
+  - name: Kementerian Kesehatan - Artikel
+    url: https://kemkes.go.id/id/rss/article/artikel-kesehatan
+    category: health
+    enabled: false
+  - name: Kementerian Kesehatan - Tips
+    url: https://kemkes.go.id/id/rss/article/tips-kesehatan
+    category: health
+    enabled: false
+  - name: Kementerian Kesehatan - Infodatin
+    url: https://kemkes.go.id/id/rss/media/infodatin
+    category: health_data
+    enabled: false
+  - name: Kementerian Kesehatan - Infografis
+    url: https://kemkes.go.id/id/rss/media/infografis
+    category: public_information
+    enabled: false
+  - name: Kementerian Kesehatan - Peraturan
+    url: https://kemkes.go.id/id/rss/media/peraturan-dan-undang-undang
+    category: policy
+    enabled: false
+  - name: Kementerian Kesehatan - Profil Kesehatan
+    url: https://kemkes.go.id/id/rss/media/profil-kesehatan
+    category: health_data
+    enabled: false
+  - name: Kementerian Kesehatan - Warta Yankes
+    url: https://kemkes.go.id/id/rss/media/warta-yankes
+    category: health
+    enabled: false
+  - name: Kementerian Imigrasi dan Pemasyarakatan
+    url: https://kemenimipas.go.id/rss?view=feeds
+    category: government
+    enabled: false
+  - name: Kemenag Kota Yogyakarta - Berita
+    url: https://yogyakartakota.kemenag.go.id/category/berita/feed/
+    category: yogyakarta
+    enabled: false
+  - name: Kemenag Kota Yogyakarta - Artikel
+    url: https://yogyakartakota.kemenag.go.id/category/artikel/feed/
+    category: education_religion
+    enabled: false
+  - name: Kemenag Kota Yogyakarta - Nasional
+    url: https://yogyakartakota.kemenag.go.id/category/nasional/feed/
+    category: public_policy
+    enabled: false
+  - name: PPID Kemenag Kota Yogyakarta
+    url: https://yogyakartakota.kemenag.go.id/ppid/rss/posts
+    category: public_information
+    enabled: false
+  - name: Unit Pelayanan Kesehatan Kemenkes - Berita
+    url: https://upk.kemkes.go.id/new/feed/rss.php?cat=l
+    category: health
+    enabled: false
+  - name: Unit Pelayanan Kesehatan Kemenkes - Artikel
+    url: https://upk.kemkes.go.id/new/feed/rss.php?cat=j
+    category: health
+    enabled: false
+  - name: Unit Pelayanan Kesehatan Kemenkes - Agenda
+    url: https://upk.kemkes.go.id/new/feed/rss.php?cat=ht
+    category: public_services
+    enabled: false
+  # reason: directory page, not a direct feed URL (was already disabled; kept as-is).
+  - name: Ditjen Perbendaharaan Kemenkeu
+    url: https://djpb.kemenkeu.go.id/portal/id/data-publikasi/publikasi-cetak/majalah-treasury-indonesia-mti/120-data-publikasi/data/1864-daftar-rss-feed-djpbn.html
+    category: economy
+    enabled: false

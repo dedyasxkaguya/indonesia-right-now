@@ -1,0 +1,42 @@
+services:
+  indonesia-right-now:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      NEWSID_OUTPUT_DIR: /data/output
+      AI_OUTPUT_DIR: /data/output/ai
+      APP_WORKERS: "1"
+    volumes:
+      - ./output:/data/output
+    shm_size: "1gb"
+    restart: unless-stopped
+
+  indonesia-right-now-dev:
+    profiles: ["dev"]
+    build: .
+    command:
+      - uvicorn
+      - app.main:app
+      - --host
+      - 0.0.0.0
+      - --port
+      - "8000"
+      - --workers
+      - "1"
+      - --reload
+    ports:
+      - "8001:8000"
+    env_file:
+      - .env
+    environment:
+      APP_ENV: development
+      APP_WORKERS: "1"
+      NEWSID_OUTPUT_DIR: /data/output
+      AI_OUTPUT_DIR: /data/output/ai
+    volumes:
+      - ./:/app
+      - ./output:/data/output
+    shm_size: "1gb"

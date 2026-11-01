@@ -1,0 +1,58 @@
+{
+  "pemerintahan": {
+    "index": "01",
+    "title": "Pemerintahan",
+    "description": "Baca indikator SPBE, pelayanan publik, SPM, kapasitas fiskal, dan pengadaan dalam satu konteks wilayah.",
+    "datasets": ["governance", "apbd", "pbj"],
+    "metrics": ["governance_digital", "fiscal_autonomy", "procurement_efficiency"]
+  },
+  "ekonomi": {
+    "index": "02",
+    "title": "Ekonomi",
+    "description": "Telusuri PDRB, pertumbuhan, pasar kerja, komposisi belanja daerah, dan ketahanan ekonomi.",
+    "datasets": ["ekonomi", "apbd", "makro"],
+    "metrics": ["economic_resilience", "productivity_per_capita", "fiscal_absorption"]
+  },
+  "pendidikan": {
+    "index": "03",
+    "title": "Pendidikan",
+    "description": "Bandingkan rasio sekolah, guru-murid, kondisi gedung, harapan lama sekolah, dan indikator kesejahteraan.",
+    "datasets": ["layanan", "makro"],
+    "metrics": ["education_quality", "service_access_index", "welfare_composite"]
+  },
+  "sosial-publik": {
+    "index": "04",
+    "title": "Sosial & Publik",
+    "description": "Lihat indikator kemiskinan, IPM, layanan publik, serta porsi belanja sosial tanpa menyamakan korelasi dengan sebab-akibat.",
+    "datasets": ["makro", "layanan", "apbd"],
+    "metrics": ["welfare_composite", "service_access_index", "social_share"]
+  },
+  "daerah": {
+    "index": "05",
+    "title": "Daerah",
+    "description": "Jelajahi cakupan wilayah, sebaran paket pengadaan, dan perbedaan indikator antar daerah.",
+    "datasets": ["pbj", "ekonomi", "apbd"],
+    "metrics": ["procurement_efficiency", "economic_resilience", "capital_share"]
+  },
+  "infrastruktur": {
+    "index": "06",
+    "title": "Infrastruktur",
+    "description": "Gali akses layanan dasar, kemantapan jalan pusat–daerah, dan pengurangan kawasan kumuh.",
+    "datasets": ["elektrifikasi", "jalan", "kumuh"],
+    "metrics": ["infrastructure-access", "road-authority-gap", "slum-reduction"]
+  },
+  "lingkungan": {
+    "index": "07",
+    "title": "Lingkungan",
+    "description": "Pahami paparan bencana, kapasitas TPA, dan mitigasi kawasan kumuh antarprovinsi.",
+    "datasets": ["bencana", "tpa"],
+    "metrics": ["disaster-exposure", "waste-overcapacity", "slum-reduction"]
+  },
+  "pangan": {
+    "index": "08",
+    "title": "Pangan",
+    "description": "Baca produksi padi–beras per kapita, produktivitas tertimbang, dan peringkat provinsi produksi pangan.",
+    "datasets": ["pertanian"],
+    "metrics": ["food-production-per-capita", "food-productivity", "basic-service-deficit"]
+  }
+}

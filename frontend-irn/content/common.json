@@ -1,0 +1,10 @@
+{
+  "brand": "indonesia-right-now",
+  "mode": {
+    "label": "MODE",
+    "active": "Mode aktif",
+    "irn": "IRN",
+    "igs": "IGS",
+    "switchLabel": "Pilih mode situs"
+  }
+}
