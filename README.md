@@ -1,53 +1,65 @@
-# IRN & IGS Platform (Indonesia Right Now & Indonesia Government Stats)
+# Indonesia Right Now (IRN) × Indonesia Government Stats (IGS)
 
-A unified civic-tech platform combining real-time Indonesian news intelligence (IRN) and open government data visualization (IGS).
+**"From Visionaries to Architects of Change"**
 
-## Tech stack
+Platform web terpadu yang dikembangkan untuk kompetisi Multimedia In Action (MIA) 2026. IRN × IGS hadir sebagai jawaban atas permasalahan maraknya disinformasi/hoaks dan sulitnya mengakses data resmi pemerintah yang terfragmentasi. 
 
-Next.js 14, FastAPI, TypeScript, Python, Tailwind CSS, ECharts, Three.js, and Groq AI.
+Dengan menggabungkan dua subtema utama (*Open Government Data* dan *Data-Driven Decision Support*), platform ini menyatukan **IRN (Indonesia Right Now)** yang menyajikan berita fakta terkini, dan **IGS (Indonesia Government Stats)** yang mengolah statistik pemerintahan (anggaran, kebijakan, indikator makro) menjadi *dashboard* interaktif dan visualisasi 3D yang intuitif serta mudah dipahami masyarakat awam.
 
-## Key features
+## ✨ Fitur Utama
+- **Dual-Mode Architecture:** Beralih mulus antara eksplorasi berita (IRN) dan eksplorasi data publik (IGS).
+- **AI Chatbot Terintegrasi:**
+  - **IRN Presenter:** Dilengkapi *Truth Guardrail* untuk menganalisis keragaman sumber berita tanpa mengklaim benar/salah secara subjektif.
+  - **IGS Data Assistant:** Menggunakan *Tool Calling* untuk menghitung statistik (rata-rata, median) secara presisi tanpa halusinasi AI.
+- **Interactive Visualizations:** Visualisasi data 2D (ECharts) dan objek 3D (Three.js) yang responsif.
+- **25+ Datasets:** Eksplorasi data pemerintah daerah, ekonomi, infrastruktur, dan kesejahteraan.
+- **Aksesibilitas (A11y):** Desain antarmuka yang ramah pengguna, termasuk untuk penyandang disabilitas.
 
-- **Dual-mode architecture:** switch between IRN news discovery and IGS public-data exploration.
-- **AI assistants:** IRN's Truth Guardrail presenter chatbot and IGS tool-calling data assistant.
-- **25+ datasets:** explore government data through regional dashboards and visualizations.
-- **Open data:** datasets and news context are presented for public exploration.
+## 🛠️ Teknologi yang Digunakan
+- **Frontend:** Next.js 14 (App Router), TypeScript, Tailwind CSS, ECharts, Three.js.
+- **Backend:** Python, FastAPI, BeautifulSoup/Playwright (Web Scraping).
+- **AI Engine:** Groq API (Llama 3 / GPT-OSS).
+- **Deployment:** Vercel (Frontend) & VPS/Cloud (Backend).
 
-## Run the monorepo
+## 🚀 Cara Menjalankan Project
 
-Requirements: Node.js 20+, pnpm, and Python 3.11+.
+Pastikan kamu sudah menginstal **Node.js 20+**, **pnpm**, dan **Python 3.11+**. Project ini terdiri dari dua folder utama: `backend` (FastAPI) dan `frontend` (Next.js).
 
-1. Clone both repositories into the expected folders:
+### 1. Clone Repositori
+```bash
+git clone <URL_REPOSITORI> indonesia-right-now
+cd indonesia-right-now
+2. Setup & Jalankan Backend (Terminal 1)
+powershell
+cd backend
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1  # Windows (Gunakan `source .venv/bin/activate` di Mac/Linux)
+python -m pip install -e .
+python -m playwright install chromium
+Copy-Item .env.example .env    # Windows (Gunakan `cp` di Mac/Linux)
+Buka file .env dan isi GROQ_API_KEY dengan API Key Groq kamu yang valid.
+Jalankan server:
 
-   ```bash
-   git clone https://github.com/dedyasxkaguya/indonesia-right-now.git
-   cd indonesia-right-now
-   git clone https://github.com/dedyasxkaguya/indonesia-right-now-fe.git indonesia-right-now-fe
-   ```
+powershell
+uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 1
+3. Setup & Jalankan Frontend (Terminal 2)
+Buka terminal baru (biarkan terminal backend tetap berjalan):
 
-2. Set up and start the backend in the first terminal:
+powershell
+cd frontend
+pnpm install
+Copy-Item .env.example .env.local  # Windows (Gunakan `cp` di Mac/Linux)
+Pastikan file .env.local berisi BACKEND_URL=http://localhost:8000.
+Jalankan frontend:
 
-   ```powershell
-   cd indonesia-right-now
-   python -m venv .venv
-   .\.venv\Scripts\Activate.ps1
-   python -m pip install -e .
-   python -m playwright install chromium
-   Copy-Item .env.example .env
-   # Set GROQ_API_KEY in .env before starting
-   python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 1
-   ```
+powershell
+pnpm dev
+4. Akses Aplikasi
+Buka browser dan akses http://localhost:3000.
 
-   On macOS/Linux, activate with `source .venv/bin/activate` and copy the environment file with `cp .env.example .env`.
+📈 Progres Saat Ini
+Fondasi antarmuka (Frontend) IRN × IGS telah selesai dikembangkan dengan sangat baik, menyajikan pengalaman pengguna yang dinamis, responsif, dan kaya akan visualisasi data interaktif.
 
-3. Configure and start the frontend in a second terminal from the repository root:
+Sistem Backend dan integrasi sumber data saat ini telah berjalan, namun masih terus disempurnakan secara berkelanjutan. Untuk IRN, tim terus mengevaluasi feed berita agar tetap legal, aktual, dan faktual, serta merancang pemanfaatan AI yang efisien. Untuk IGS, tantangan utama terletak pada ketersediaan dataset publik yang terkadang terbatas atau terfragmentasi.
 
-   ```powershell
-   cd indonesia-right-now-fe
-   pnpm install
-   Copy-Item .env.example .env.local
-   # Set BACKEND_URL=http://localhost:8000 in .env.local
-   pnpm dev
-   ```
-
-On macOS/Linux, copy the frontend environment file with `cp .env.example .env.local`. The backend runs at `http://localhost:8000` and the frontend at `http://localhost:3000`. Keep both terminals running. Environment files are local configuration and should not be committed.
+Proyek ini telah memiliki fondasi arsitektur yang kuat dan siap untuk dikembangkan lebih lanjut, dengan tujuan menghadirkan akses informasi publik yang lebih mudah, terstruktur, dan akuntabel bagi seluruh masyarakat Indonesia.
