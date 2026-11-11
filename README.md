@@ -1,108 +1,53 @@
-# Indonesia Right Now × Indonesia Government Stats
+# IRN & IGS Platform (Indonesia Right Now & Indonesia Government Stats)
 
-**Indonesia Right Now (IRN) × Indonesia Government Stats (IGS)** adalah platform yang menyatukan informasi berita dan data pemerintahan Indonesia dalam satu wadah yang mudah dijelajahi. IRN menghimpun berita dari berbagai provinsi, sedangkan IGS membantu pengguna menelusuri informasi publik, seperti anggaran, kebijakan, program, dan alokasi.
+A unified civic-tech platform combining real-time Indonesian news intelligence (IRN) and open government data visualization (IGS).
 
-Informasi dikumpulkan dari sumber tepercaya dan disajikan secara terstruktur agar lebih mudah dipahami, termasuk oleh pengguna dengan beragam kebutuhan aksesibilitas. Melalui platform ini, IRN × IGS berupaya memudahkan masyarakat menemukan informasi yang relevan dan menelusuri sumbernya dalam format yang lebih tertata.
+## Tech stack
 
-## Teknologi yang Digunakan
+Next.js 14, FastAPI, TypeScript, Python, Tailwind CSS, ECharts, Three.js, and Groq AI.
 
-- **Frontend:** Next.js 14 (App Router), TypeScript, Tailwind CSS, ECharts dan Three.js untuk visualisasi, serta Groq AI.
-- **Backend:** Python, FastAPI, BeautifulSoup dan Playwright untuk pengumpulan serta pengolahan konten, serta Groq AI.
+## Key features
 
-## Cara Menjalankan Project
+- **Dual-mode architecture:** switch between IRN news discovery and IGS public-data exploration.
+- **AI assistants:** IRN's Truth Guardrail presenter chatbot and IGS tool-calling data assistant.
+- **25+ datasets:** explore government data through regional dashboards and visualizations.
+- **Open data:** datasets and news context are presented for public exploration.
 
-Petunjuk berikut mengasumsikan kedua folder bernama `frontend` dan `backend`. Ganti `<URL_REPOSITORI>` dengan URL repositori yang digunakan.
+## Run the monorepo
 
-### 1. Clone repositori
+Requirements: Node.js 20+, pnpm, and Python 3.11+.
 
-```bash
-git clone <URL_REPOSITORI> indonesia-right-now
-cd indonesia-right-now
-```
+1. Clone both repositories into the expected folders:
 
-### 2. Siapkan dan jalankan backend
+   ```bash
+   git clone https://github.com/dedyasxkaguya/indonesia-right-now.git
+   cd indonesia-right-now
+   git clone https://github.com/dedyasxkaguya/indonesia-right-now-fe.git indonesia-right-now-fe
+   ```
 
-Buka terminal pertama, lalu jalankan perintah berikut dari direktori repositori:
+2. Set up and start the backend in the first terminal:
 
-```bash
-cd backend
-python -m venv .venv
-```
+   ```powershell
+   cd indonesia-right-now
+   python -m venv .venv
+   .\.venv\Scripts\Activate.ps1
+   python -m pip install -e .
+   python -m playwright install chromium
+   Copy-Item .env.example .env
+   # Set GROQ_API_KEY in .env before starting
+   python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 1
+   ```
 
-Aktifkan virtual environment:
+   On macOS/Linux, activate with `source .venv/bin/activate` and copy the environment file with `cp .env.example .env`.
 
-```bash
-# Windows PowerShell
-.\.venv\Scripts\Activate.ps1
+3. Configure and start the frontend in a second terminal from the repository root:
 
-# Linux/macOS
-source .venv/bin/activate
-```
+   ```powershell
+   cd indonesia-right-now-fe
+   pnpm install
+   Copy-Item .env.example .env.local
+   # Set BACKEND_URL=http://localhost:8000 in .env.local
+   pnpm dev
+   ```
 
-Instal dependensi dan siapkan konfigurasi:
-
-```bash
-python -m pip install -e .
-python -m playwright install chromium
-```
-
-Salin `.env.example` menjadi `.env`, lalu isi `GROQ_API_KEY` dengan kunci API Groq yang valid untuk mengaktifkan fitur AI. Berkas dependensi backend saat ini dikelola melalui `pyproject.toml`, bukan `requirements.txt`.
-
-```powershell
-# Windows PowerShell
-Copy-Item .env.example .env
-```
-
-```bash
-# Linux/macOS
-cp .env.example .env
-```
-
-Jalankan FastAPI pada port `8000`:
-
-```bash
-uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 1
-```
-
-### 3. Siapkan dan jalankan frontend
-
-Buka terminal kedua, lalu jalankan:
-
-```bash
-cd frontend-irn
-pnpm install
-```
-
-Salin `.env.example` menjadi `.env.local`:
-
-```powershell
-# Windows PowerShell
-Copy-Item .env.example .env.local
-```
-
-```bash
-# Linux/macOS
-cp .env.example .env.local
-```
-
-Pastikan `.env.local` memuat konfigurasi berikut agar frontend terhubung ke backend lokal:
-
-```env
-BACKEND_URL=http://localhost:8000
-```
-
-Jalankan frontend:
-
-```bash
-pnpm dev
-```
-
-### 4. Akses website
-
-Buka [http://localhost:3000](http://localhost:3000) di peramban.
-
-## Progres Saat Ini
-
-Fondasi antarmuka IRN × IGS telah dikembangkan dengan baik dan menyajikan pengalaman yang dinamis untuk menjelajahi berita maupun data pemerintahan. Namun, integrasi backend dan sumber data masih terus disempurnakan. Untuk IRN, tim masih mengevaluasi sumber berita yang legal, aktual, dan faktual, sekaligus merancang pemanfaatan AI yang efisien tanpa mengurangi keandalan informasi. Untuk IGS, ketersediaan dataset yang relevan masih menjadi tantangan; sebagian data memiliki akses terbatas, sementara data lainnya memerlukan penelusuran lebih lanjut.
-
-Dengan demikian, pengembangan frontend telah mencapai tahap yang kuat, sedangkan backend masih memerlukan penyempurnaan dan validasi lebih lanjut. Proyek ini memiliki fondasi untuk terus dikembangkan, dengan tujuan menghadirkan akses yang lebih mudah, terstruktur, dan bertanggung jawab terhadap informasi publik Indonesia.
+On macOS/Linux, copy the frontend environment file with `cp .env.example .env.local`. The backend runs at `http://localhost:8000` and the frontend at `http://localhost:3000`. Keep both terminals running. Environment files are local configuration and should not be committed.
