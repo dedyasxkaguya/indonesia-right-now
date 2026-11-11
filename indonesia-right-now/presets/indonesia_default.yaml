@@ -1,0 +1,79 @@
+# Source preset for the indonesia-right-now /news endpoint.
+# Only Indonesian-language publisher feeds are enabled in the legal tier.
+
+sources:
+  - name: ANTARA - Terkini
+    url: https://www.antaranews.com/rss/terkini
+    category: indonesia
+    tier: legal
+    enabled: true
+  - name: ANTARA - Top News
+    url: https://www.antaranews.com/rss/top-news
+    category: indonesia
+    tier: legal
+    enabled: true
+  - name: ANTARA - Ekonomi
+    url: https://www.antaranews.com/rss/ekonomi
+    category: economy
+    tier: legal
+    enabled: true
+  - name: CNN Indonesia - Nasional
+    url: https://www.cnnindonesia.com/nasional/rss
+    category: politics
+    tier: legal
+    enabled: true
+  - name: CNN Indonesia - Ekonomi
+    url: https://www.cnnindonesia.com/ekonomi/rss
+    category: economy
+    tier: legal
+    enabled: true
+  - name: CNBC Indonesia - News
+    url: https://www.cnbcindonesia.com/news/rss
+    category: economy
+    tier: legal
+    enabled: true
+  - name: Tempo - Nasional
+    url: https://rss.tempo.co/nasional
+    category: politics
+    tier: legal
+    enabled: true
+  - name: Tempo - Bisnis
+    url: https://rss.tempo.co/bisnis
+    category: economy
+    tier: legal
+    enabled: true
+  - name: Liputan6 - News
+    url: https://feed.liputan6.com/rss/news
+    category: indonesia
+    tier: legal
+    enabled: true
+  - name: Kumparan
+    url: https://lapi.kumparan.com/v2.0/rss/
+    category: indonesia
+    tier: legal
+    enabled: true
+  - name: Tirto.id
+    url: https://tirto.id/sitemap/r/google-discover
+    category: indonesia
+    tier: legal
+    enabled: true
+  - name: Katadata
+    url: https://katadata.co.id/rss
+    category: economy
+    tier: legal
+    enabled: true
+  - name: Suara - News
+    url: https://www.suara.com/rss/news
+    category: indonesia
+    tier: legal
+    enabled: true
+  - name: Republika
+    url: https://www.republika.co.id/rss
+    category: politics
+    tier: legal
+    enabled: true
+  - name: Kontan - Nasional
+    url: https://rss.kontan.co.id/news/nasional
+    category: economy
+    tier: legal
+    enabled: true
